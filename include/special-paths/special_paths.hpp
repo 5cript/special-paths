@@ -1,6 +1,6 @@
 #pragma once
 
-#include <string>
+#include <filesystem>
 
 namespace SpecialPaths
 {
@@ -12,5 +12,5 @@ namespace SpecialPaths
      *         some cross platform applications do not, but instead dump their stuff into the
      *         user directory directly. If you want to be one of THOSE people, go ahead an pass false.
      */
-    std::string getHome(bool useEnvironment = true, bool useAppdata = true);
+    std::filesystem::path getHome(bool useEnvironment = true, bool useAppdata = true);
 }

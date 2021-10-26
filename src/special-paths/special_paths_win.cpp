@@ -1,11 +1,11 @@
-#include "special_paths.hpp"
+#include <special-paths/special_paths.hpp>
 #include <shlobj.h>
 #include <stdexcept>
 
 namespace SpecialPaths
 {
 //#####################################################################################################################
-    std::string getHome(bool useEnvironment, bool useAppdata)
+    std::filesystem::path getHome(bool useEnvironment, bool useAppdata)
     {
         auto cslid = CSIDL_APPDATA;
         if (!useAppdata)
